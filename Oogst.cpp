@@ -3,6 +3,7 @@
 //
 #include <iostream>
 #include "Oogst.h"
+#include  "raylib.h"
 
 Oogst::Oogst() {
     graanPos = {400, 550};
