@@ -5,10 +5,13 @@
 #include "Game.h"
 #include "raylib.h"
 #include "Player.h"
+#include "Oogst.h"
 
 void Scherm() {
    //initializatie van scherm
    Game* game = new ::Game;
+   Oogst* oogst = new Oogst;
+
 
    int width = game ->GetWidth();
    int height = game ->GetHeight();
@@ -16,10 +19,11 @@ void Scherm() {
    SetTargetFPS(60);
    //hier alles samenvoegen
    while (!WindowShouldClose()) {
-
+         oogst ->draw();
    }
    // hier deletes zetten
    delete game;
+   delete oogst;
    CloseWindow();
 
 }
