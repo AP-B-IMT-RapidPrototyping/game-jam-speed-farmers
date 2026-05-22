@@ -8,6 +8,7 @@
 
 
 class Oogst {
+    Oogst();
 private:
     Vector2 graanPos;
     float graHeight;
