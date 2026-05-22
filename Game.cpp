@@ -27,6 +27,7 @@ void Scherm() {
    SetTargetFPS(60);
    //hier alles samenvoegen
  oogst->loadTexture();
+    player->loadTexture();
 
    while (!WindowShouldClose()) {
        BeginDrawing();
@@ -44,6 +45,7 @@ void Scherm() {
    }
    // hier deletes zetten
     oogst->unloadTexture();
+    player->unloadTexture();
     delete game;
     delete oogst;
     delete player;

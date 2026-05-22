@@ -35,6 +35,11 @@ namespace Speler {
         void addCorn();
         void clearInventory();
         bool isFull() const;
+
+        void loadTexture();
+        void unloadTexture();
+        Texture2D texture;
+
     };
 }
 

@@ -41,8 +41,10 @@ namespace Speler {
       }
    }
 
+
    void Player::Draw() const {
-      DrawCircle(position.x,position.y, 20, RED);
+      //DrawCircle(position.x,position.y, 20, RED);
+      DrawTexture(texture, position.x, position.y, WHITE);
 
    }
 
@@ -64,5 +66,12 @@ namespace Speler {
    bool Player::isFull() const {                   // Controleert of de inventaris vol zit
       return cornCount >= maxCapacity;            // Geeft 'true' terug als de speler 5/5 maïs heeft
    }*/
+   void Player::loadTexture() {
+      // Laad de karakter-spritesheet in vanuit de map (4 richtingen x 3 frames = 12 vakjes)
+      texture = LoadTexture("C:/Users/tutku/Documents/AP/y2526/game-jam-speed-farmers/cmake-build-debug/Png/Farm-character2D.png");
+   }
 
+   void Player::unloadTexture() {
+      UnloadTexture(texture);     // Verwijder de afbeelding uit het geheugen bij afsluiten
+   }
 }

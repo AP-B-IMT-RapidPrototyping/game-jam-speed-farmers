@@ -18,8 +18,6 @@ Oogst::Oogst() {
 void Oogst::draw() {
     DrawText("Mais", graanPos.x + 15, graanPos.y + 40, 20,ORANGE);
     DrawTexture(image, graanPos.x, graanPos.y, WHITE);
-
-    DrawRectangleV(graanPos, size, RED);
 }
 
 void Oogst::loadTexture() {
