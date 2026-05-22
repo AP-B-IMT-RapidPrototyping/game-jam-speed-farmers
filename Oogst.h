@@ -8,7 +8,6 @@
 
 
 class Oogst {
-    Oogst();
 private:
     Vector2 graanPos;
     float graHeight;
@@ -17,6 +16,7 @@ private:
     Rectangle getRectangle();
 
 public:
+    Oogst();
     void update();
     void draw();
 };
