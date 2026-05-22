@@ -14,7 +14,16 @@ namespace Speler {
    }
 
    Player::~Player() {
+      // Inventaris instellen
+      cornCount = 0;                  // Speler begint met 0 maïs in de tas
+      maxCapacity = 2;                // Maximaal 5 maïs tegelijk dragen
 
+      // Animatie-instellingen
+      currentFrame = 0;               // Beginframe van de loopanimatie (eerste plaatje)
+      frameRow = 0;                   // Rij 0 = speler kijkt naar voren (richting omlaag)
+      frameCounter = 0;               // Telt hoeveel frames er verstreken zijn (voor timing)
+      frameSpeed = 10;                // Wissel elke 10 frames van animatieplaatje
+      isMoving = false;               // Speler staat stil aan het begin
    }
 
    void Player::Update() {
@@ -55,4 +64,5 @@ namespace Speler {
    bool Player::isFull() const {                   // Controleert of de inventaris vol zit
       return cornCount >= maxCapacity;            // Geeft 'true' terug als de speler 5/5 maïs heeft
    }*/
+
 }

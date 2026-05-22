@@ -22,11 +22,11 @@ void Oogst::draw() {
     DrawRectangleV(graanPos, size, RED);
 }
 
-Oogst::~Oogst() {
+void Oogst::loadTexture() {
+    // Laad de karakter-spritesheet in vanuit de map (4 richtingen x 3 frames = 12 vakjes)
     image = LoadTexture("C:/Users/tutku/Documents/AP/y2526/game-jam-speed-farmers/cmake-build-debug/Png/free_sample_crops.png");
 }
 
-
 void Oogst::unloadTexture() {
-    UnloadTexture(image);
+    UnloadTexture(image);     // Verwijder de afbeelding uit het geheugen bij afsluiten
 }

@@ -24,7 +24,7 @@ public:
     void update();
     void draw();
     Oogst();
-    ~Oogst();
+
 };
 
 

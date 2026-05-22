@@ -26,6 +26,7 @@ void Scherm() {
    InitWindow(width,height,"SpeedFarmer");
    SetTargetFPS(60);
    //hier alles samenvoegen
+ oogst->loadTexture();
 
    while (!WindowShouldClose()) {
        BeginDrawing();
@@ -39,12 +40,15 @@ void Scherm() {
 
        EndDrawing();
 
+
    }
    // hier deletes zetten
+    oogst->unloadTexture();
     delete game;
     delete oogst;
     delete player;
 
    CloseWindow();
+
 
 }
