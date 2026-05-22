@@ -7,7 +7,9 @@
 
 Inventory::Inventory(Speler::Player* Player){
     speler = Player;
+
 }
+int Speler::Player::getGold() const { return gold; }
 
 void Inventory::drawUI() const {
     // Tekent de volledige HUD (heads-up display) onderaan het scherm
@@ -22,11 +24,11 @@ void Inventory::drawUI() const {
     DrawRectangleLinesEx({ 0, 500, 800, 100 }, 4, borderColor); // Dikke rand eromheen
 
     // Naam van de speler (links in de balk)
-    DrawText("Starys:", 20, 515, 22, WHITE);
+    DrawText("Coins:", 20, 515, 22, WHITE);
 
-    /*// Goud-teller (hoeveel goud de speler heeft)
-    std::string goldText = "Goud: " + std::to_string(speler.getGold()); // Zet getal om naar tekst
-    DrawText(goldText.c_str(), 20, 550, 22, YELLOW); // Teken in geel*/
+    // Goud-teller (hoeveel goud de speler heeft)
+    std::string goldText = "Goud: " + std::to_string(speler->getGold());
+    DrawText(goldText.c_str(), 20, 550, 20, YELLOW);
 
     // Verticale scheidingslijn tussen status (links) en inventaris (rechts)
     DrawLineEx({ 180, 500 }, { 180, 600 }, 4, borderColor);

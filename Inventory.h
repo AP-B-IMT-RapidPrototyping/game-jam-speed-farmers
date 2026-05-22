@@ -10,6 +10,8 @@
 class Inventory {
 private:
     Speler::Player* speler;
+    int getGold() const;
+
 public:
     void drawUI() const;
     Inventory(Speler::Player* speler);

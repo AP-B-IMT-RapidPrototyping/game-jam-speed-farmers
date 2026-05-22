@@ -13,6 +13,8 @@ namespace Speler {
         Vector2 position;
         Vector2 pos;
         Vector2 size;
+        float speed;
+        int gold;
         int height;
         int width;
 
@@ -24,6 +26,14 @@ namespace Speler {
         int frameCounter;   // Telt hoeveel game-frames er verstreken zijn (voor animatiesnelheid)
         int frameSpeed;     // Na hoeveel frames het volgende animatieplaatje getoond wordt
         bool isMoving;      // Geeft aan of de speler op dit moment beweegt (true) of stilstaat (false)
+
+        // ZAAD !!!
+        static const int TOTAL_CORN = 4;        // Totaal aantal planten
+        Vector2 cornPos[TOTAL_CORN];             // Posities van de maïs
+        Rectangle cornSourceRec[TOTAL_CORN];    // Welk deel van de afbeelding tonen?
+        int cornGrowthStage[TOTAL_CORN];        // Huidige groeifase (0-7)
+        int growthTimer[TOTAL_CORN];            // Telt frames voor groei
+        const int growthSpeed = 120;            // Snelheid: hoe lang per fase?
     public:
         Player();
         ~Player();
@@ -38,6 +48,11 @@ namespace Speler {
 
         void loadTexture();
         void unloadTexture();
+
+        int getGold() const;
+        void handleCollisions();
+
+        bool aanVracht;
         Texture2D texture;
 
     };
