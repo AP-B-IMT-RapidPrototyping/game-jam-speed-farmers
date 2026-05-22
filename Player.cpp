@@ -139,9 +139,9 @@ void Speler::Player::Draw() const {
 
    void Speler::Player::loadTexture() {
       // Laad de karakter-spritesheet in vanuit de map (4 richtingen x 3 frames = 12 vakjes)
-      texture = LoadTexture("C:/Users/tutku/Documents/AP/y2526/game-jam-speed-farmers/cmake-build-debug/Png/Farm-character2D.png");
+      texture = LoadTexture("C:/Users/tutku/Documents/AP/y2526/game-jam-speed-farmers/Png/Farm-character2D.png");
    }
-
+//C:/Users/tutku/Documents/AP/y2526/game-jam-speed-farmers/cmake-build-debug/Png/Farm-character2D.png
    void Speler::Player::unloadTexture() {
       UnloadTexture(texture);     // Verwijder de afbeelding uit het geheugen bij afsluiten
    }
