@@ -11,6 +11,10 @@ namespace Speler {
       height = 70;
    }
 
+   Player::~Player() {
+
+   }
+
    void Player::Update() {
       if (IsKeyDown(KEY_W) || IsKeyDown(KEY_UP)) {
          position.y -= 2.0;
@@ -19,14 +23,14 @@ namespace Speler {
          position.y += 2.0;
       }
       if (IsKeyDown(KEY_A) || IsKeyDown(KEY_LEFT)) {
-
+         position.x -= 2.0;
       }
       if (IsKeyDown(KEY_D) || IsKeyDown(KEY_RIGHT)) {
-
+         position.x += 2.0;
       }
    }
 
    void Player::Draw() const {
-      DrawRectangle(position.x,position.y,50,70,RED);
+      DrawCircle(position.x,position.y, 20, RED);
    }
 }
