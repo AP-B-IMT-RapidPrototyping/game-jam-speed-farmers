@@ -6,12 +6,19 @@
 #include "raylib.h"
 
 Wagen::Wagen() {
-    VrachtPos = {550, 400};
+    VrachtPos = {550, 300};
     VraHeight = 100.0f;
     VraWidth = 100.0f;
 }
 
 void Wagen::draw() {
-    DrawRectangle(VrachtPos.x, VrachtPos.y, VraWidth, VraHeight, GREEN);
-    DrawText("Vracht", VrachtPos.x + 15, VrachtPos.y + 40, 20,RED);
+   DrawTexture(texture,VrachtPos.x,VrachtPos.y,WHITE);
+}
+
+void Wagen::loadTexture() {
+    texture=LoadTexture("C:/Users/user/game-jam-speed-farmers/cmake-build-debug/Png/ktruck2.png");
+}
+
+void Wagen::unloadTexture() {
+    UnloadTexture(texture);
 }

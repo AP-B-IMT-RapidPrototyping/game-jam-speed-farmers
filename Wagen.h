@@ -14,11 +14,14 @@ class Wagen {
         float VraWidth;
         float Vraspeed;
         Rectangle getRectangle();
+        Texture2D texture;
 
     public:
         Wagen();
         void update();
         void draw();
+    void loadTexture();
+    void unloadTexture();
 };
 
 
