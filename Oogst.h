@@ -2,8 +2,9 @@
 // Created by tutku on 22/05/2026.
 //
 
-#ifndef SPEEDFARMER_OOGST_H
-#define SPEEDFARMER_OOGST_H
+
+#pragma once
+
 #include "raylib.h"
 
 
@@ -22,4 +23,4 @@ public:
 };
 
 
-#endif //SPEEDFARMER_OOGST_H
+

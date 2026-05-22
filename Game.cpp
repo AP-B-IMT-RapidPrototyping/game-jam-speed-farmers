@@ -10,7 +10,7 @@
 void Scherm() {
    //initializatie van scherm
    Game* game = new ::Game;
-   Oogst* oogst = new Oogst;
+    Oogst* oogst = new Oogst;
 
 
    int width = game ->GetWidth();
@@ -18,12 +18,15 @@ void Scherm() {
    InitWindow(width,height,"SpeedFarmer");
    SetTargetFPS(60);
    //hier alles samenvoegen
+   ClearBackground(BLACK);
    while (!WindowShouldClose()) {
-         oogst ->draw();
+       BeginDrawing();
+        oogst ->draw();
+       EndDrawing();
    }
    // hier deletes zetten
    delete game;
-   delete oogst;
+
    CloseWindow();
 
 }
