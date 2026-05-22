@@ -17,6 +17,7 @@ namespace Speler {
         Player();
         ~Player();
 
+
         void Draw() const;
         void Update();
     };
