@@ -12,7 +12,7 @@ void Scherm() {
    Game* game = new ::Game;
     Oogst* oogst = new Oogst;
 
-
+//dkdjfe
    int width = game ->GetWidth();
    int height = game ->GetHeight();
    InitWindow(width,height,"SpeedFarmer");
