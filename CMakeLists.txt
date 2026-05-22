@@ -11,7 +11,9 @@ add_executable(SpeedFarmer main.cpp
         Wagen.cpp
         Wagen.h
         Oogst.cpp
-        Oogst.h)
+        Oogst.h
+        Text.cpp
+        Text.h)
 
 include(FetchContent)
 

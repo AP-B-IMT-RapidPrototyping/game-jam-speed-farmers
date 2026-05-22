@@ -7,11 +7,14 @@
 #include "Player.h"
 #include "Oogst.h"
 #include "Player.h";
+#include "Text.h"
+
 void Scherm() {
    //initializatie van scherm
    Game* game = new ::Game;
     Oogst* oogst = new Oogst;
    Speler::Player* player = new Speler::Player;
+    Text* text = new Text;
 //dkdjfe
    int width = game ->GetWidth();
    int height = game ->GetHeight();
@@ -22,6 +25,7 @@ void Scherm() {
    while (!WindowShouldClose()) {
        BeginDrawing();
        ClearBackground(BLACK);
+       text ->Draw();
         oogst ->draw();
        player -> Draw();
        player ->Update();

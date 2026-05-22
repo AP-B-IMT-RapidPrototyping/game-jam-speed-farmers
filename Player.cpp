@@ -9,6 +9,8 @@ namespace Speler {
       position = {200,200};
       width = 50;
       height = 70;
+      pos = {100,100};
+      size = {20,40};
    }
 
    Player::~Player() {
@@ -32,5 +34,6 @@ namespace Speler {
 
    void Player::Draw() const {
       DrawCircle(position.x,position.y, 20, RED);
+
    }
 }

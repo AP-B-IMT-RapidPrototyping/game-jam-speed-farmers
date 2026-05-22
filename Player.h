@@ -11,6 +11,8 @@ namespace Speler {
     class Player {
     private:
         Vector2 position;
+        Vector2 pos;
+        Vector2 size;
         int height;
         int width;
     public:
