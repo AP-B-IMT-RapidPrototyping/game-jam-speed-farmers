@@ -36,4 +36,23 @@ namespace Speler {
       DrawCircle(position.x,position.y, 20, RED);
 
    }
+
+   /*// INVENTARIS !!!
+   int Player::getCornCount() const {  // Geeft terug hoeveel maïs de speler momenteel bij zich heeft
+      return cornCount;
+   }
+
+   void Player::addCorn() {            // Voegt 1 maïs toe aan de inventaris (alleen als de tas niet vol is)
+      if (cornCount < maxCapacity) {  // Controleer of er nog ruimte is
+         cornCount++;                // Voeg 1 maïs toe
+      }
+   }
+
+   void Player::clearInventory() {     // Maakt de inventaris helemaal leeg (bijv. na verkoop op de markt)
+      cornCount = 0;
+   }
+
+   bool Player::isFull() const {                   // Controleert of de inventaris vol zit
+      return cornCount >= maxCapacity;            // Geeft 'true' terug als de speler 5/5 maïs heeft
+   }*/
 }

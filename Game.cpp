@@ -3,18 +3,23 @@
 //
 
 #include "Game.h"
+
+#include "Inventory.h"
 #include "raylib.h"
 #include "Player.h"
 #include "Oogst.h"
-#include "Player.h";
-#include "Text.h"
+#include "Player.h"
+#include "Wagen.h"
 
 void Scherm() {
    //initializatie van scherm
    Game* game = new ::Game;
     Oogst* oogst = new Oogst;
-   Speler::Player* player = new Speler::Player;
-    Text* text = new Text;
+    Wagen* wagen = new Wagen;
+    Speler::Player* player = new Speler::Player;
+    Inventory* inv = new Inventory(player);
+
+
 //dkdjfe
    int width = game ->GetWidth();
    int height = game ->GetHeight();
@@ -25,18 +30,20 @@ void Scherm() {
    while (!WindowShouldClose()) {
        BeginDrawing();
        ClearBackground(BLACK);
-       text ->Draw();
-        oogst ->draw();
+       oogst ->draw();
        player -> Draw();
        player ->Update();
+       wagen ->draw();
+       inv ->drawUI();
+
 
        EndDrawing();
 
    }
    // hier deletes zetten
-   delete game;
+    delete game;
     delete oogst;
- delete player;
+    delete player;
 
    CloseWindow();
 

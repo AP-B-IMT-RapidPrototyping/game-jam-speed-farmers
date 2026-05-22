@@ -14,12 +14,17 @@ private:
     float graHeight;
     float graWidth;
     float speed;
-    Rectangle getRectangle();
+    Rectangle getRectangle;
+    Texture2D image;
+    Vector2 size;
 
 public:
-    Oogst();
+    void loadTexture();
+    void unloadTexture();
     void update();
     void draw();
+    Oogst();
+    ~Oogst();
 };
 
 

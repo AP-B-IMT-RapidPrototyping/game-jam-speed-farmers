@@ -15,10 +15,12 @@ namespace Speler {
         Vector2 size;
         int height;
         int width;
+
+        int cornCount;      // Hoeveel maïs de speler momenteel in de inventaris heeft
+        int maxCapacity;    // Het maximaal aantal maïs dat de speler kan dragen
     public:
         Player();
         ~Player();
-
 
         void Draw() const;
         void Update();
