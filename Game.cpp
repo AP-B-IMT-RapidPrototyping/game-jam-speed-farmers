@@ -31,7 +31,7 @@ void Scherm() {
 
    while (!WindowShouldClose()) {
        BeginDrawing();
-       ClearBackground(BLACK);
+       ClearBackground(DARKBROWN);
        oogst ->draw();
        player -> Draw();
        player ->Update();
