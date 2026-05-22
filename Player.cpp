@@ -69,6 +69,8 @@ namespace Speler {
       } else {
          currentFrame = 1;   // Stilstaand: gebruik het middelste frame als rustpositie
       }
+      //collisions
+      //bool isAtMarket = CheckCollisionRecs({position.x, position.y, size, height}, {marketPos.x, marketPos.y, marketWidth, marketHeight});
    }
    }
 

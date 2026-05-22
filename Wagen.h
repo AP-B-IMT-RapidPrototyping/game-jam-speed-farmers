@@ -22,6 +22,12 @@ class Wagen {
         void draw();
     void loadTexture();
     void unloadTexture();
+    float GetWidth() {
+        return VraWidth;
+    }
+    float GetHeight() {
+        return VraHeight;
+    }
 };
 
 

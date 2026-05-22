@@ -28,7 +28,7 @@ void Scherm() {
    //hier alles samenvoegen
  oogst->loadTexture();
     player->loadTexture();
-
+wagen ->loadTexture();
    while (!WindowShouldClose()) {
        BeginDrawing();
        ClearBackground(DARKBROWN);
@@ -46,6 +46,7 @@ void Scherm() {
    // hier deletes zetten
     oogst->unloadTexture();
     player->unloadTexture();
+    wagen->unloadTexture();
     delete game;
     delete oogst;
     delete player;

@@ -16,7 +16,7 @@ void Wagen::draw() {
 }
 
 void Wagen::loadTexture() {
-    texture=LoadTexture("C:/Users/user/game-jam-speed-farmers/cmake-build-debug/Png/ktruck2.png");
+    texture=LoadTexture("C:/Users/tutku/Documents/AP/y2526/game-jam-speed-farmers/cmake-build-debug/Png/ktruck2.png");
 }
 
 void Wagen::unloadTexture() {
